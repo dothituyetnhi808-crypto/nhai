@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import './index.css'
 
 function App() {
   const [scrolled, setScrolled] = useState(false)
@@ -20,12 +19,12 @@ function App() {
     <>
       {/* Navbar */}
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-        <a href="#" className="nav-logo">NHÀI ORYZA</a>
+        <a href="#home" className="nav-logo" onClick={(event) => { event.preventDefault(); scrollToSection('home') }}>NHÀI ORYZA</a>
         <ul className="nav-links">
-          <li><a onClick={() => scrollToSection('home')} href="#home">Trang chủ</a></li>
-          <li><a onClick={() => scrollToSection('about')} href="#about">Giới thiệu</a></li>
-          <li><a onClick={() => scrollToSection('products')} href="#products">Sản phẩm</a></li>
-          <li><a onClick={() => scrollToSection('contact')} href="#contact">Liên hệ</a></li>
+          <li><a href="#home" onClick={(event) => { event.preventDefault(); scrollToSection('home') }}>Trang chủ</a></li>
+          <li><a href="#about" onClick={(event) => { event.preventDefault(); scrollToSection('about') }}>Giới thiệu</a></li>
+          <li><a href="#products" onClick={(event) => { event.preventDefault(); scrollToSection('products') }}>Sản phẩm</a></li>
+          <li><a href="#contact" onClick={(event) => { event.preventDefault(); scrollToSection('contact') }}>Liên hệ</a></li>
         </ul>
       </nav>
 

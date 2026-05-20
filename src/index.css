@@ -58,6 +58,12 @@ button {
   align-items: center;
   background: var(--secondary);
   border-bottom: 1px solid var(--accent-light);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .nav-logo {
